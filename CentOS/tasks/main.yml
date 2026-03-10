@@ -1,0 +1,17 @@
+---
+# tasks file for Prometheus_centOS
+- name: install Promethius
+  yum:
+    name:
+      - prometheus
+    state: present
+
+- name: install Cacti with its dependencies
+  yum:
+    name:
+      - httpd
+      - php-mysqlnd
+      - mariadb-server
+      - net-snmp
+      - cacti
+    state: present

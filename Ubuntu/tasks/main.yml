@@ -1,0 +1,19 @@
+---
+# tasks file for Cacti_centOS
+- name: install Promethius prerequisites
+  apt:
+    name:
+      - prometheus
+    state: present
+
+- name: install Cacti with its dependencies
+  apt:
+    name:
+      - php
+      - apache2
+      - libapache2-mod-php
+      - mysql-server
+      - snmpd
+      - snmp
+      - cacti
+    state: present
